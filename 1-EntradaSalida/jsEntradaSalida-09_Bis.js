@@ -21,12 +21,12 @@ function mostrarAumento()
 
 	sueldo = prompt("Ingresa su sueldo sin decimales");
 	mensaje_sueldo = "Mi sueldo es: " + sueldo;
-	sueldo_int = parseInt(sueldo)
+	sueldo_int = parseInt(sueldo);
 	document.getElementById('txtIdSueldo').value=mensaje_sueldo;
 	aumento = prompt("Ingresa el porcentaje sin decimales, ni simbolos");
 	mensaje_aumento = "El aumento es: " + aumento + "%";
-	aumento_int = aumento
+	aumento_int = parseInt(aumento);
 	document.getElementById('txtIdResultado').value=mensaje_aumento;
-	resultado = ((sueldo_int * aumento_int / 100) + sueldo_int)
-	alert("Tu sueldo con aumento es: " + resultado)
+	resultado = ((sueldo_int * aumento_int / 100) + sueldo_int);
+	alert("Tu sueldo con aumento es: " + resultado);
 }
