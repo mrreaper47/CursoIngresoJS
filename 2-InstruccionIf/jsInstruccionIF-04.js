@@ -7,7 +7,5 @@ function mostrar() {
 
     if (edad_int < 18 && edad_int >= 13) {
         alert("Eres adolecente.");
-    } else {
-        alert("No eres adolecene.");
     }
 }
