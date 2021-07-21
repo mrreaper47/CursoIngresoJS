@@ -24,10 +24,7 @@ function CalcularPrecio() {
     precioBruto = (precio * cantidad);
     porcentaje = 0
 
-    switch (true) {
-        case cantidad >= 6:
-            porcentaje = 50;
-            break;
+    switch (cantidad) {
         case cantidad == 5:
             switch (marca) {
                 case "ArgentinaLuz":
@@ -43,10 +40,12 @@ function CalcularPrecio() {
                 case "ArgentinaLuz":
                 case "FelipeLamparas":
                     porcentaje = 25;
+                    break;
                 default:
                     porcentaje = 20;
                     break;
             }
+            break;
         case cantidad == 3:
             switch (marca) {
                 case "ArgentinaLuz":
@@ -54,10 +53,21 @@ function CalcularPrecio() {
                     break;
                 case "FelipeLamparas":
                     porcentaje = 10;
+                    break;
                 default:
                     porcentaje = 5;
                     break;
             }
+            break;
+        case cantidad == 2:
+            porcentaje = 0;
+            break;
+        case cantidad == 1:
+            porcentaje = 0;
+            break;
+        default:
+            porcentaje == 6;
+            break;
     }
     porcentaje=(precioBruto*porcentaje/100);
     precioFinal=(precioBruto-porcentaje);
